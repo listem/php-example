@@ -1,0 +1,16 @@
+version: '2'
+services:
+  db:
+    extends:
+      file: docker/common.yml
+      service: db
+  web:
+    extends:
+      file: docker/common.yml
+      service: web
+    ports:
+      - 60000:80
+    depends_on:
+      - db
+    links:
+      - db
