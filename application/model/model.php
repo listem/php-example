@@ -17,16 +17,15 @@ class Model
     /**
      * Get all songs from database
      */
-    public function getAllSongs()
+    public function getAllUnits()
     {
-        $sql = "SELECT id, artist, track, link FROM song";
+        $sql = "SELECT u.id, unit_name, unit_code, credits, unit_active, course_name, lecturer_name   
+            FROM units u
+            JOIN courses c ON u.course_id = c.id
+            JOIN lecturers l ON u.lecturer_id = l.id";
         $query = $this->db->prepare($sql);
         $query->execute();
 
-        // fetchAll() is the PDO method that gets all result rows, here in object-style because we defined this in
-        // core/controller.php! If you prefer to get an associative array as the result, then do
-        // $query->fetchAll(PDO::FETCH_ASSOC); or change core/controller.php's PDO options to
-        // $options = array(PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC ...
         return $query->fetchAll();
     }
 
