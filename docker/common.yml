@@ -4,6 +4,7 @@ services:
     image: mysql:5.7
     volumes:
       - "$PWD/docker/.data/db:/var/lib/mysql"
+      - "$PWD/docker/initial-schema.sql:/docker-entrypoint-initdb.d/dump.sql"
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: Uw*tm8?
