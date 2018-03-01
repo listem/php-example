@@ -1,13 +1,13 @@
 DROP TABLE IF EXISTS `courses`;
 CREATE TABLE IF NOT EXISTS `courses` (
 	`id` int(10) NOT NULL auto_increment,
-	`course_name` varchar(255),
-	`course_code` varchar(255),
-	`course_active` boolean,
+	`name` varchar(255),
+	`code` varchar(255),
+	`active` boolean,
 	PRIMARY KEY( `id` )
 );
 
-INSERT INTO `courses` (`course_name`, `course_code`, `course_active`) VALUES
+INSERT INTO `courses` (`name`, `code`, `active`) VALUES
 ('Accounting & Finance', 'ACC01', 1),
 ('Architecture', 'ACH02', 1),
 ('Computer Science', 'COMSEC', 1),
@@ -24,11 +24,11 @@ INSERT INTO `courses` (`course_name`, `course_code`, `course_active`) VALUES
 DROP TABLE IF EXISTS `lecturers`;
 CREATE TABLE IF NOT EXISTS `lecturers` (
 	`id` int(10) NOT NULL auto_increment,
-	`lecturer_name` varchar(255),
+	`name` varchar(255),
 	PRIMARY KEY( `id` )
 );
 
-INSERT INTO `lecturers` (`lecturer_name`) VALUES
+INSERT INTO `lecturers` (`name`) VALUES
 ('John Doe'),
 ('Clorinda Turco'),
 ('Rayna Swanger'),
@@ -44,17 +44,17 @@ INSERT INTO `lecturers` (`lecturer_name`) VALUES
 DROP TABLE IF EXISTS `units`;
 CREATE TABLE IF NOT EXISTS `units` (
 	`id` int(10) NOT NULL auto_increment,
-	`unit_name` varchar(255),
-	`unit_code` varchar(255),
+	`name` varchar(255),
+	`code` varchar(255),
 	`credits` int(2),
-	`unit_active` varchar(255),
+	`active` varchar(255),
 	`course_id` int(10),
 	`lecturer_id` int(10),
 	`created_at` datetime,
 	PRIMARY KEY( `id` )
 );
 
-INSERT INTO `units` (`unit_name`, `unit_code`, `credits`, `unit_active`, `course_id`, `lecturer_id`) VALUES
+INSERT INTO `units` (`name`, `code`, `credits`, `active`, `course_id`, `lecturer_id`) VALUES
 ('Accounting for Decision Making - Executive', 'ACCE600', 5, 1, 2, 1),
 ('Introduction To Accounting', 'ACCT100', 5, 1, 10, 1),
 ('Business Accounting', 'ACCT104', 3, 1, 4, 6),

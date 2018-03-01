@@ -19,7 +19,7 @@ class Model
      */
     public function getAllUnits()
     {
-        $sql = "SELECT u.id, unit_name, unit_code, credits, unit_active, course_name, lecturer_name   
+        $sql = "SELECT u.name AS unit_name, u.code AS unit_code, u.credits, u.active AS unit_active, c.name AS course_name, l.name AS lecturer_name   
             FROM units u
             JOIN courses c ON u.course_id = c.id
             JOIN lecturers l ON u.lecturer_id = l.id";
