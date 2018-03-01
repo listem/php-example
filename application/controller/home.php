@@ -16,6 +16,8 @@ class Home extends Controller
      */
     public function index()
     {
+        $units = $this->model->getAllUnits();
+
         // load views
         require APP . 'view/_templates/header.php';
         require APP . 'view/home/index.php';
