@@ -10,15 +10,11 @@
             Listem - Interactive Demos <span class="sr-only">(current)</span>
         </a>
       </li>
-      <!-- <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+    </ul>
+    <ul class="navbar-nav justify-content-end">
+      <li class="nav-item" style="margin-right: 10px;">
+        <a class="nav-link" href="https://github.com/listem/listem-php" target="_blank"><i class="fab fa-github"></i> Find us on Github</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li> -->
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <select class="form-control mr-sm-2 custom-select custom-select-sm">
