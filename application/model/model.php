@@ -15,15 +15,11 @@ class Model
     }
 
     /**
-     * Get all units with relationship from database
+     * Fetch all results of given select query.
      */
-    public function getAllUnits()
+    public function fetchAll($query)
     {
-        $sql = "SELECT u.name AS unit_name, u.code AS unit_code, u.credits, u.active AS unit_active, c.name AS course_name, l.name AS lecturer_name   
-            FROM units u
-            JOIN courses c ON u.course_id = c.id
-            JOIN lecturers l ON u.lecturer_id = l.id";
-        $query = $this->db->prepare($sql);
+        $query = $this->db->prepare($query);
         $query->execute();
 
         return $query->fetchAll();

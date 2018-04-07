@@ -16,6 +16,7 @@
         "source": "https://github.com/panique/mini"
     },
     "require": {
-        "php": ">=5.3.0"
+        "php": ">=5.3.0",
+        "listem/listem-php": "dev-master"
     }
 }
