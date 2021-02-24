@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/listem/listem-php.git",
-                "reference": "fec8f46c97aa7e402367f094481f78951389de3a"
+                "reference": "61310ce2ce6d650d021f14f6d0c1e25f3da67c12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/listem/listem-php/zipball/fec8f46c97aa7e402367f094481f78951389de3a",
-                "reference": "fec8f46c97aa7e402367f094481f78951389de3a",
+                "url": "https://api.github.com/repos/listem/listem-php/zipball/61310ce2ce6d650d021f14f6d0c1e25f3da67c12",
+                "reference": "61310ce2ce6d650d021f14f6d0c1e25f3da67c12",
                 "shasum": ""
             },
             "require": {
@@ -43,7 +43,7 @@
                 }
             ],
             "description": "Listem is an easy to use (but highly customizable) data sorting and filtering module for PHP, that can be used for data lists/tables/grids, reports or APIs.",
-            "time": "2018-03-15 20:26:30"
+            "time": "2018-04-11 04:06:38"
         }
     ],
     "packages-dev": [],
